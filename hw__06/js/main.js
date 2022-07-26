@@ -1,27 +1,25 @@
-let userBurger;
+let usersBurger;
 
 do {
 
-    userBurger = prompt(`Choose type of burger (hamburger or cheeseburger)`);
+    usersBurger = prompt(`Choose type of burger (hamburger or cheeseburger)`);
 
-    if (userBurger) userBurger = userBurger.replaceAll(' ', '').toLowerCase();
+    if (usersBurger) usersBurger = usersBurger.replaceAll(' ', '').toLowerCase();
 
-} while (!userBurger || (userBurger !== `hamburger` && userBurger !== `cheeseburger`));
-
-console.log(userBurger)
+} while (!usersBurger || (usersBurger !== `hamburger` && usersBurger !== `cheeseburger`));
 
 const hamburgerPrice = 10;
 const cheeseburgerPrice = 15;
 let burgerPrice = 0;
 
-switch (userBurger) {
+switch (usersBurger) {
 
     case "hamburger":
         burgerPrice += hamburgerPrice;
         break;
 
     case "cheeseburger":
-        const doubleCheese = confirm(`Would you like to add double cheese?`);
+        let doubleCheese = confirm(`Would you like to add double cheese?`);
         const doubleCheesePrice = 5;
 
         if (doubleCheese) {
@@ -33,38 +31,20 @@ switch (userBurger) {
         break;
 }
 
-console.log(`burger price ${burgerPrice}`);
-
-let potato = confirm(`Would you like potato?`);
 let potatoPrice = 0;
+let potato = confirm(`Would you like potato?`);
+let potatoSize;
+
 if (potato) {
-    let potatoSize;
     const smallPotatoPrice = 10;
     const middlePotatoPrice = 15;
     const bigPotatoPrice = 20;
 
-    do {
+    potatoSize = prompt(`Choose potato size: small/middle/big`);
 
-        potatoSize = prompt(`Choose potato size: small/middle/big`);
-
-        if (potatoSize === '' || potatoSize === null) {
-
-            potatoPrice += smallPotatoPrice;
-            break;
-
-        } else if (potatoSize) {
-
-            potatoSize = potatoSize.replaceAll(' ', '').toLowerCase();
-        }
-
-
-    } while (potatoSize !== `small` && potatoSize !== `middle` && potatoSize !== `big`)
+    if (potatoSize) potatoSize = potatoSize.replaceAll(' ', '').toLowerCase();
 
     switch (potatoSize) {
-        case "small":
-
-            potatoPrice += smallPotatoPrice;
-            break;
 
         case "middle":
 
@@ -74,34 +54,25 @@ if (potato) {
         case "big":
             potatoPrice += bigPotatoPrice;
             break;
+
+        default:
+            potatoSize = "small";
+            potatoPrice += smallPotatoPrice;
     }
 
 }
 
-console.log(` potato price ${potatoPrice}`);
-
 let sauce = confirm(`Would you like sauce?`);
 let saucePrice = 0;
+let sauceType;
 
 if (sauce) {
-    let sauceType;
     const mayonnaisePrice = 3;
     const ketchupPrice = 2;
 
-    do {
-        sauceType = prompt(`Choose sauce: ketchup/mayonnaise`)
+    sauceType = prompt(`Choose sauce: ketchup/mayonnaise`);
 
-        if (sauceType === '' || sauceType === null) {
-
-            saucePrice += ketchupPrice;
-            break;
-
-        } else if (sauceType) {
-
-            sauceType = sauceType.replaceAll(' ', '').toLowerCase();
-        }
-
-    } while (sauceType !== `mayonnaise` && sauceType !== `ketchup`)
+    if (sauceType) sauceType = sauceType.replaceAll(' ', '').toLowerCase();
 
     switch (sauceType) {
 
@@ -109,15 +80,18 @@ if (sauce) {
             saucePrice += mayonnaisePrice;
             break;
 
-        case "ketchup":
+        default:
+            sauceType = `ketchup`;
             saucePrice += ketchupPrice;
-            break
-
     }
+
 }
 
-console.log(`sauce price ${saucePrice}`)
+const totalPrice = burgerPrice + potatoPrice + saucePrice;
 
-let totalPrice = burgerPrice + potatoPrice + saucePrice;
-
-console.log(`total price ${totalPrice}`)
+document.write(`<ul>
+    <li>Bulka 🍔: ${usersBurger}</li>
+    ${potato ? `<li>Potato 🍟: ${potatoSize} </li>` : ``}
+    ${sauce ? `<li>Sauce 🧂: ${sauceType} </li>` : ``}
+</ul>
+<p>Final price: ${totalPrice}</p>`);
