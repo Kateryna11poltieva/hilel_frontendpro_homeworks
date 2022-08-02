@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.rainbow {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+.rainbow__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.rainbow__circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.rainbow .red {
+  background-color: #f34237;
+}
+.rainbow .orange {
+  background-color: #fd9802;
+}
+.rainbow .yellow {
+  background-color: #fdea3c;
+}
+.rainbow .green {
+  background-color: #8bc24a;
+}
+.rainbow .blue {
+  background-color: #03a9f3;
+}
+.rainbow .indigo {
+  background-color: #3f50b6;
+}
+.rainbow .violet {
+  background-color: #9b27b0;
+}
+
+/*# sourceMappingURL=main.css.map */
