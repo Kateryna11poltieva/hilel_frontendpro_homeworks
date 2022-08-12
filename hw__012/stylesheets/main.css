@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: rgba(236, 125, 117, 0.3);
+}
+
+td, th {
+  border: 2px solid #590707;
+  color: #210303;
+  padding: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
