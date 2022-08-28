@@ -199,3 +199,15 @@ const html = userData
     .join('');
 document.write(`<div class ="users">${html}</div>`);
 
+/*const ROLES = {
+    student: user => new Student(user),
+    admin: user => new Admin(user),
+    lector: user => new Lector(user),
+}
+
+let render = users
+    .map(user => ROLES[user.role] ? ROLES[user.role](user) : new User(user))
+    .map(user => user.render())
+    .join(``);
+
+document.write(`<div class="users">${render}</div>`);*/
