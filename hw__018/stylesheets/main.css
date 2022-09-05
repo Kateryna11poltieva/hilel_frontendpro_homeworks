@@ -1,0 +1,17 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 0, 0);
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=main.css.map */
