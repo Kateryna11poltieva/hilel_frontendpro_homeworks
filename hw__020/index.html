@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+</head>
+<body>
+<div id="element" class="element"></div>
+<form id="shapeForm" class="form">
+    <label>
+        Choose element shape:
+        <select id="shapeVariant" class="form__select">
+            <option value="square">square</option>
+            <option value="rectangle">rectangle</option>
+            <option value="circle">circle</option>
+        </select>
+    </label>
+    <label>
+        Choose element color:
+        <input type="color" id="shapeColor" class="form__color">
+    </label>
+    <button id="shapeSave" class="form__btn">Render element</button>
+</form>
+<script src="./js/main.js">
+</script>
+</body>
+</html>
