@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-Hero {
+  display: flex;
+  align-items: start;
+
+  &__fieldset {
+    padding: 50px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+}
+
+table {
+  border-collapse: collapse;
+    th, td{
+      border: 1px solid black;
+      padding: 5px 7px;
+      text-align: center;
+    }
+}
