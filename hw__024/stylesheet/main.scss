@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  color: #5b5b5b;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.car__image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colors__dots {
+  display: flex;
+  justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  height: 35px;
+  width: 25px;
+  margin: 1px 2px;
+  border-radius: 2px;
+  display: inline-block;
+  transition: box-shadow 0.6s ease;
+}
