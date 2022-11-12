@@ -124,6 +124,7 @@ const COFFEE_TYPES = {
 class Coffee {
     constructor(coffee) {
         Object.assign(this, coffee);
+        console.log(this)
     }
 
     makeCoffee() {
